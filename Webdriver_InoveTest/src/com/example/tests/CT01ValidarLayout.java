@@ -26,7 +26,7 @@ public class CT01ValidarLayout {
 
 	@Before
 	public void setUp() throws Exception {
-//		System.setProperty("webdriver.gecko.driver","D:\\Java_Geral\\SeleniumWebdriver\\Drivers-Navegadores\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver","D:\\Java_Geral\\SeleniumWebdriver\\Drivers-Navegadores\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		baseUrl = "https://livros.inoveteste.com.br/";
 		driver.manage().window().maximize();
