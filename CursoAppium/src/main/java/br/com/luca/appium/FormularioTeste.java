@@ -7,6 +7,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.luca.appium.core.DSL;
 import br.com.luca.appium.core.DriverFactory;
@@ -61,7 +64,13 @@ public class FormularioTeste {
 	public void deveInterargirSwitchCheckbox() throws MalformedURLException {
 		// Verificar status dos elementos
 		MobileElement check = driver.findElement(By.className("android.widget.CheckBox"));
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.visibilityOf(check));
+
 		MobileElement switc = driver.findElement(MobileBy.AccessibilityId("switch"));
+		WebDriverWait wait1 = new WebDriverWait(driver, 15);
+		wait1.until(ExpectedConditions.visibilityOf(switc));
+
 		Assert.assertTrue(check.getAttribute("checked").equals("false"));
 		Assert.assertTrue(switc.getAttribute("checked").equals("true"));
 
@@ -79,7 +88,10 @@ public class FormularioTeste {
 	public void deveResolverDesafio() throws MalformedURLException {
 
 		// Preencher campos data e hora
-		driver.findElement(By.className("android.widget.EditText")).sendKeys("Octavio de Sousa");
+		WebDriverWait wait = new WebDriverWait(driver, 15);		
+		WebElement ediT = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.className("android.widget.EditText"))));
+		ediT.sendKeys("Octavio de Sousa");
+//		driver.findElement(By.className("android.widget.EditText")).sendKeys("Octavio de Sousa");
 		driver.findElement(By.className("android.widget.CheckBox")).click();
 		;
 		driver.findElement(By.className("android.widget.Switch")).click();
