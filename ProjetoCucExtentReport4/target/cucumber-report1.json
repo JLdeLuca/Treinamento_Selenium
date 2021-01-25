@@ -1,0 +1,52 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Abrir com Browser",
+        "description": "",
+        "id": "site;abrir-com-browser",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 32508194400,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "eu acesso o site \"http://www.terra.com.br\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://www.terra.com.br",
+                  "offset": 18
+                }
+              ],
+              "location": "AbrirBrowserFeatureSteps.euAcessoOSite(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 716757800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "entro na pagina principal",
+            "match": {
+              "location": "AbrirBrowserFeatureSteps.entroNaPaginaPrincipal()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Site",
+    "description": "",
+    "id": "site",
+    "keyword": "Feature",
+    "uri": "AbrirBrowserFeature.feature"
+  }
+]
