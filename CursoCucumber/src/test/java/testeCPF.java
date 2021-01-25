@@ -13,7 +13,7 @@ public class testeCPF {
 		System.out.println(valor);
 		
 		
-		Date dateCompra = DateUtils.obterDataDiferençaDias(2);
+		Date dateCompra = DateUtils.obterDataDiferencaDias(2);
 		System.out.println(dateCompra);
 		
 		

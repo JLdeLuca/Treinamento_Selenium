@@ -79,7 +79,7 @@ public class AlugarFilmeSteps {
 
 	@Então("^a data de entrega será em (\\d+) dias?$")
 	public void aDataDeEntregaSeráEmDias(int arg1) throws Throwable {
-		Date dataEsperada = DateUtils.obterDataDiferençaDias(arg1);
+		Date dataEsperada = DateUtils.obterDataDiferencaDias(arg1);
 		Date dataReal = nota.getDataEntrega();
 		
 		DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
